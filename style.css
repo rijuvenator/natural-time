@@ -151,7 +151,7 @@ a:hover {
     h2.display { width: 90%; }
     .slider { width: 90%; }
     .time_button {padding-left: 0.85em; padding-right: 0.85em; }
-    .state_button { padding: 0.3em 1.2em; width: 40%; }
+    .state_button { padding-left: 0.6em; padding-right: 0.6em; width: 42%; }
 }
 
 /* come back to responsive
