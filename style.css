@@ -147,7 +147,13 @@ a:hover {
 }
 
 /* PAGE RESPONSIVE QUERIES */
-@media only screen and (max-width:  520px) { h2.display { width: 90%; } .slider { width: 90%; } }
+@media only screen and (max-width:  520px) {
+    h2.display { width: 90%; }
+    .slider { width: 90%; }
+    .state_button { width: 10.5em; }
+    .time_button { padding: 0.2em 1.1em; }
+}
+
 /* come back to responsive
 @media only screen and (max-width:  800px) { .page { width: 90%;   } }
 @media only screen and (min-width:  800px) { .page { width: 90%;   } }
