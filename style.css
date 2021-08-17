@@ -150,8 +150,8 @@ a:hover {
 @media only screen and (max-width:  520px) {
     h2.display { width: 90%; }
     .slider { width: 90%; }
-    .state_button { width: 10.5em; }
-    .time_button { padding: 0.2em 1.1em; }
+    .time_button {padding-left: 0.85em; padding-right: 0.85em; }
+    .state_button { padding: 0.3em 1.2em; width: 40%; }
 }
 
 /* come back to responsive
