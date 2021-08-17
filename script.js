@@ -62,6 +62,7 @@ input_element.oninput = sliderListener;
 // time element, time state, time state function, time state button
 var time_element = document.createElement("h2");
 time_element.classList.add('display');
+time_element.classList.add('disable-dbl-tap-zoom');
 time_element.id = "time";
 var time_state = 0;
 var time_states = ["def", "24h", "h60", "h10", "m60", "m10", "s10"];
@@ -75,12 +76,14 @@ time_element.onclick = changeTimeState;
 var time_state_button = document.createElement("button");
 time_state_button.textContent = "12-hour";
 time_state_button.classList.add("time_button");
+time_state_button.classList.add("disable-dbl-tap-zoom");
+time_state_button.classList.add("state_button");
 time_state_button.onclick = changeTimeState;
-time_state_button.style['width'] = '13em';
 
 // time element, time state, time state function, time state button
 var sex_element = document.createElement("h2");
 sex_element.classList.add('display');
+sex_element.classList.add('disable-dbl-tap-zoom');
 sex_element.id = "sex";
 var sex_state = 0;
 var sex_states = ["def", "sec", "min", "hrs"];
@@ -94,8 +97,9 @@ sex_element.onclick = changeSexState;
 var sex_state_button = document.createElement("button");
 sex_state_button.textContent = "natural time";
 sex_state_button.classList.add("time_button");
+sex_state_button.classList.add("disable-dbl-tap-zoom");
+sex_state_button.classList.add("state_button");
 sex_state_button.onclick = changeSexState;
-sex_state_button.style['width'] = '13em';
 
 // increment button function and elements
 var durationMap = {"s" : 1, "m" : 60, "h" : 3600};
@@ -115,6 +119,7 @@ for (i=0; i<button_texts.length; i++) {
     let button = document.createElement("button");
     button.textContent = button_texts[i];
     button.classList.add("time_button");
+    button.classList.add("disable-dbl-tap-zoom");
     button.onclick = changeSlider;
     buttons.push(button);
 }
