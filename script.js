@@ -5,7 +5,7 @@ for (i=0;i<20;i++) { numerals.push(String.fromCharCode( 97+i)); }
 for (i=0;i<20;i++) { numerals.push(String.fromCharCode( 65+i)); }
 for (i=0;i<10;i++) { numerals.push(String.fromCharCode(945+i)); }
 
-// decimal to sexagesimal
+// decimal to sexagesimal; constructs the appropriate format string given the input format
 function dec2sex(val, sex_state) {
     var result = '';
     var temp = parseInt(val);
@@ -24,7 +24,7 @@ function dec2sex(val, sex_state) {
 
 // wrapper
 function pad(num, s) { return num.toString().padStart(s, "0"); }
-// seconds to time
+// seconds to time; constructs the appropriate format string given the input format
 function secs2time(val, time_state) {
     val = parseInt(val);
     var pm = false;
@@ -47,7 +47,7 @@ function secs2time(val, time_state) {
 // slider function, slider, and display elements
 function sliderListener() {
     document.getElementById("time"       ).textContent = secs2time(this.value, time_state);
-    document.getElementById("output_secs").textContent = dec2sex  (this.value, sex_state);
+    document.getElementById("sex").textContent = dec2sex  (this.value, sex_state);
 }
 
 var input_element = document.createElement("input");
@@ -59,6 +59,7 @@ input_element.min = "0";
 input_element.max = "86399";
 input_element.oninput = sliderListener;
 
+// time element, time state, time state function, time state button
 var time_element = document.createElement("h2");
 time_element.classList.add('display');
 time_element.id = "time";
@@ -77,9 +78,10 @@ time_state_button.classList.add("time_button");
 time_state_button.onclick = changeTimeState;
 time_state_button.style['width'] = '13em';
 
-var output_secs_element = document.createElement("h2");
-output_secs_element.classList.add('display');
-output_secs_element.id = "output_secs";
+// time element, time state, time state function, time state button
+var sex_element = document.createElement("h2");
+sex_element.classList.add('display');
+sex_element.id = "sex";
 var sex_state = 0;
 var sex_states = ["def", "sec", "min", "hrs"];
 var pretty_sex_states = ["natural time", "natural seconds", "natural minutes", "natural hours"];
@@ -88,14 +90,14 @@ function changeSexState() {
     sex_state_button.textContent = pretty_sex_states[sex_state];
     input_element.oninput();
 }
-output_secs_element.onclick = changeSexState;
+sex_element.onclick = changeSexState;
 var sex_state_button = document.createElement("button");
 sex_state_button.textContent = "natural time";
 sex_state_button.classList.add("time_button");
 sex_state_button.onclick = changeSexState;
 sex_state_button.style['width'] = '13em';
 
-// button function and elements
+// increment button function and elements
 var durationMap = {"s" : 1, "m" : 60, "h" : 3600};
 function changeSlider() {
     if (this.textContent[0] == "+") {
@@ -135,6 +137,7 @@ for (i=0;i<120;i++) {
 }
 
 // final layout
+// main div, section divs that have extra space at the bottom and come with an H3, paragraph wrapper
 var main = document.createElement('div');
 main.id = "main";
 
@@ -154,6 +157,7 @@ function addP(text, div) {
     div.appendChild(p);
 }
 
+// natural time section: info, container with state buttons, time display, sex display, container with range, increment buttons
 var section = addSection("Natural Time Clock");
 addP("Change the time with the slider.\nIncrement with +/– buttons or arrow keys.\nCycle between units in either system.", section);
 
@@ -163,7 +167,7 @@ container.appendChild(sex_state_button);
 section.appendChild(container);
 
 section.appendChild(time_element);
-section.appendChild(output_secs_element);
+section.appendChild(sex_element);
 
 var container = document.createElement('div');
 container.appendChild(input_element);
@@ -173,10 +177,12 @@ for (i=0; i<buttons.length; i++) {
     section.appendChild(buttons[i])
 }
 
+// conversion table section: info, table
 section = addSection("Base 60 Conversion Table");
 addP("Numbers in base 10 (decimal) are shaded gray.\nCorresponding base 60 numerals appear underneath.", section);
 section.appendChild(tbl);
 
+// link section: p innerHTML because italic, a with GitHub, extra space at bottom
 section = addSection("");
 var p = document.createElement('p');
 p.innerHTML = "Explanations, examples, and source code at<br>the <i>Natural Time</i> repository on";
@@ -187,5 +193,6 @@ a.href = "https://github.com/rijuvenator/natural-time";
 section.appendChild(a);
 addP("\n\n\n", section);
 
+// main complete; add to body and call main engine function once
 document.body.appendChild(main);
 input_element.oninput();
