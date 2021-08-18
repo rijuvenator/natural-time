@@ -136,7 +136,7 @@ For standard time,
 
 For natural time,
 
-  * **natural time** is the 3 digit time in base 60, with no units or decimal points, here equal to the number of seconds
+  * **natural time** is the 3 digit time in base 60, with no units or points, here equal to seconds
   * **natural seconds** is natural time in seconds, with the decimal point at the end
   * **natural minutes** is natural time in minutes, with the decimal point one space to the left
   * **natural hours** is natural time in hours, with the decimal point two spaces to the left
