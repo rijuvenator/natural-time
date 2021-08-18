@@ -31,7 +31,7 @@ Here, I'll offer and explain one simple solution: if you write time in base 60, 
 
 ### Base 10, a.k.a. Home Base
 
-One reason the metric system is so easy to use is that its units are factors of 10, which happens to be the **base** we write all our numbers in. What this means is that we write numbers as a sequence of digits, or numerals, multiplied by powers of 10. This is home base, the most familiar and common way of writing numbers, and it's so ubiquitous we don't even think about it, so for thr
+One reason the metric system is so easy to use is that its units are factors of 10, which happens to be the **base** we write all our numbers in. What this means is that we write numbers as a sequence of digits, or numerals, multiplied by powers of 10. This is home base, the most familiar and common way of writing numbers, and it's so ubiquitous we don't even think about it.
 
 Let's say we have a number like 73.5. We don't think about this every day, but this is actually shorthand for
 
@@ -47,13 +47,13 @@ So another, completely equivalent way of writing the above is
 
 73.5 = 7 &times; 10<sup>1</sup> + 3 &times; 10<sup>0</sup> + 5 &times; 10<sup>–1</sup>
 
-Since we usually assume that the digits are multiplying powers of 10, we don't write that part out – good thing, too, or everyday numbers would be pretty hard to read. We just write the 7, 3, and 5, put down a . to mark where the 0 power is – the decimal point – and we know which power to start and end with. This is called the _place value_ system, and because the numbers are being multiplied by powers of 10, it's called **base 10**, or **decimal**. It's a pretty compact way of representing any numbers, especially when compared to other systems like Roman numerals.
+Since we usually assume that the digits are multiplying powers of 10, we don't write that part out – good thing, too, or everyday numbers would be pretty hard to read. We just write the 7, 3, and 5, put down a . to mark where the 0 power is – the decimal point – and we know which power to start and end with. This is called the _place value_ system, and because the numbers are being multiplied by powers of 10, it's called **base 10**, or **decimal**. It's a pretty compact way of representing any number, especially when compared to other systems like Roman numerals.
 
 ### Bases Other Than 10
 
 What's so special about base 10? **Nothing at all**. It's completely arbitrary. We could have picked any number. We're using to counting in 10's, so we picked 10, but there's nothing stopping us from picking something else. For example, here's 73.5, written as a sequence of _numbers multiplying powers of 2_:
 
-1 &times 2<sup>6</sup> + 0 &times 2<sup>5</sup> + 0 &times 2<sup>4</sup> + 1 &times 2<sup>3</sup> + 0 &times 2<sup>2</sup> + 0 &times 2<sup>1</sup> + 1 &times 2<sup>0</sup> + 1 &times 2<sup>–1</sup> 
+1 &times; 2<sup>6</sup> + 0 &times; 2<sup>5</sup> + 0 &times; 2<sup>4</sup> + 1 &times; 2<sup>3</sup> + 0 &times; 2<sup>2</sup> + 0 &times; 2<sup>1</sup> + 1 &times; 2<sup>0</sup> + 1 &times; 2<sup>–1</sup>
 
 It looks complicated, but it's really just some number (a 1 or 0) multiplying 2 to some power, in decreasing order from left to right. If you calculate that out, you'll find it's 64 + 8 + 1 + 0.5 = 73.5. And again, _if we already know that every digit is multiplying powers of 2_, we can just write the "multiplying numbers" out (they're called **coefficients**), and it looks simple:
 
@@ -71,7 +71,7 @@ Does that mean multiplying and dividing by powers of 2 is easy when a number is 
 
 1001001.1 &rarr; 10010011.
 
-That first 1 on the left now represents 1 &times 2<sup>7</sup> and so on, all the way down, and you can verify that 128 + 16 + 2 + 1 = 147, which is 73.5 &times; 2.
+That first 1 on the left now represents 1 &times; 2<sup>7</sup> and so on, all the way down, and you can verify that 128 + 16 + 2 + 1 = 147, which is 73.5 &times; 2.
 
 Now we see why working with metric is so easy: it's because **conversions in metric involve multiplying and dividing by 10**. We write everything in base 10 and all the units are separated by factors of 10, so working with metric is as easy as working with any ordinary number.
 
