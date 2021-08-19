@@ -156,7 +156,7 @@ We can verify with the conversion table that, since C represents 32, 212 minutes
 
 If we used base 60 in our everyday life, we could even quickly do things like the number of minutes between 7:53 am and 1:36 pm: it's a simple subtraction of the pure natural time numbers **dG** (1:36 pm) and **7&delta;** (7:53 am) to yield **5N**, or 343 minutes.
 
-Subtraction dG – 7&delta; works like it does in ordinary math
+Subtraction of dG – 7&delta; works like it does in ordinary math:
 
   * Start with the 1's place; G < &delta; so borrow 10 (60, in decimal!) from d and add to G
   * Then do 1G – &delta; to get the 1's place, N
