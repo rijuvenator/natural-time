@@ -120,6 +120,8 @@ The [Natural Time demo](https://rijuvenator.github.io/natural-time/) lets you pu
 
 Converting between hours, minutes, and seconds is as easy as moving the decimal point (really, "sexagesimal point").
 
+In natural time, every second, minute, and hour is represented by a single unique digit, and the representation works just like it works with base 10 numbers, ticking over when it gets to 59 instead of at 9. Reading a time in natural time tells you, transparently, what its structure is in hours, minutes, and seconds.
+
 #### Cycling Units
 
 The demo cycles between the following sets of units.
@@ -151,9 +153,14 @@ So, how long is _Ben-Hur_, really? Well, 212 minutes in natural time is **3C0**,
 
 We can verify with the conversion table that, since C represents 32, 212 minutes = 12720 seconds = 3 hours 32 minutes.
 
-In natural time, every second, minute, and hour is represented by a single unique digit, and the representation works just like it works with base 10 numbers, ticking over when it gets to 59 instead of at 9. Reading a time in natural time tells you, transparently, what its structure is in hours, minutes, and seconds.
 
 If we used base 60 in our everyday life, we could even quickly do things like the number of minutes between 7:53 am and 1:36 pm: it's a simple subtraction of the pure natural time numbers **dG** (1:36 pm) and **7&delta;** (7:53 am) to yield **5N**, or 343 minutes.
+
+&nbsp;dG
+– 7&delta;
+_______
+
+Subtraction works like it does in ordinary math: G < &delta; so borrow 10 (60, in decimal!) from d and add to G, then do 1G – &delta; to get the 1's place, N; now the 10's place does c – 7 which is 5, leaving us with a final answer of 5N.
 
 ### Natural Time Extensions and Jokes
 
