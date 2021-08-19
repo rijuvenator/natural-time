@@ -153,7 +153,6 @@ So, how long is _Ben-Hur_, really? Well, 212 minutes in natural time is **3C0**,
 
 We can verify with the conversion table that, since C represents 32, 212 minutes = 12720 seconds = 3 hours 32 minutes.
 
-
 If we used base 60 in our everyday life, we could even quickly do things like the number of minutes between 7:53 am and 1:36 pm: it's a simple subtraction of the pure natural time numbers **dG** (1:36 pm) and **7&delta;** (7:53 am) to yield **5N**, or 343 minutes.
 
 Subtraction of dG – 7&delta; works like it does in ordinary math:
@@ -162,6 +161,12 @@ Subtraction of dG – 7&delta; works like it does in ordinary math:
   * Then do 1G – &delta; to get the 1's place, N
   * Now the 10's place does c – 7 which is 5
   * Leaving us with a final answer of 5N.
+
+How about fractions of time? One-fifth of an hour in standard time is 0.2 hours, 12 minutes, or 720 seconds. But one-fifth in base 60 is just 0. and the symbol for one-fifth of 60, or c, so 0.c. That means one-fifth of an hour is
+
+  * 0.c hours
+  * c minutes
+  * c.0 seconds
 
 ### Natural Time Extensions and Jokes
 
